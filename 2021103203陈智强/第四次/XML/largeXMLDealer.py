@@ -12,19 +12,7 @@ from optparse import OptionParser
 import time
 
 
-def dealwithElementdfsbuildtree1(elem,faterDict):
-    """"""
-    if isinstance(elem, object):
-        # print(elem)
-        faterDict['child'] = []
-        if len(elem):
-            # 判断是否有子节点
-            i = 0
-            for child in elem:
-                faterDict['child'].append({"root": child.tag})
-                if len(child):
-                    dealwithElementdfsbuildtree1(child,faterDict['child'][i])
-                i=i+1
+
 
 class largeXMLDealer:
     """
@@ -38,9 +26,12 @@ class largeXMLDealer:
 
     def __call__(self,func):
         def warpper(*args, **kwargs):
-            start = time.time()
+            starttime =time.time()
+            print("执行前时间",starttime)
             ret = self.parse(self.fileName,func,*args)
-            print(f'运行时间:{time.time() - start}')
+            endtime = time.time()
+            print("执行后时间",endtime)
+            print("用时",{endtime-starttime})
             return ret
         return warpper
 
@@ -129,13 +120,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # from lxml.etree import iterparse
+    from callDealer import dealwithElementdfsbuildtree1
 
-    # with open('test.xml', 'rb') as xml:
-    #     for event, element in iterparse(xml, events=['start',"end"]):
-    #         print(element)
     la = largeXMLDealer("P00734.xml")
-    largeXMLDealer.parse(la,"P00734.xml" ,dealwithElementdfsbuildtree1,"organism")
-    # main()
-# Linux Command Line Example:
-# python3 largeXMLDealer.py -t entry /home/Biodata/OrignalData/Protein/Uniprot/current/uniprot_sprot.xml
+    largeXMLDealer.parse(la,"P00734.xml" ,dealwithElementdfsbuildtree1,"protein")
