@@ -1,0 +1,2 @@
+Python与数据挖掘学习计划
+了解python的基础用法，用过jupyter notebooks，了解Anaconda和conda，pandas，numpy，在jupyter使用csv文件，可以给数据处理缺失值和重复行，用scikit-learn来训练模型，使用matplotlib进行数据可视化，现在在学习论文（关于图神经网络）中的python代码，让其运行，然后读懂看懂，目前还处于一知半解状态，对整体代码的理解不够，好多库还不知道其对数据作用。
