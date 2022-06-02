@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<body title="python xml test">
+    <class title="ZX Test 1" type="python xml">
+        <number>1</number>
+        <Text>ptrhon xml test 1</Text>
+        <time>2019</time>
+        <next title="ZX nest 1">
+            <valueInfo type="str"><V>1.1</V></valueInfo>
+            <valueInfo type="str"><V>1.2</V></valueInfo>
+        </next>
+    </class>
+    <class title="ZX Test 2" type="python xml">
+        <number>2</number>
+        <Text>ptrhon xml test 2</Text>
+        <time>2021</time>
+        <next title="ZX nest 2">
+            <valueInfo type="str"><V>2.1</V></valueInfo>
+            <valueInfo type="str"><V>2.2</V></valueInfo>
+        </next>
+	</class>
+</body>
